@@ -1,0 +1,193 @@
+.efficiency {
+
+    .container {
+        @media (max-width: 1150px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        max-width: 535px;
+
+        @media (max-width: 1150px) {
+            text-align: center;
+        }
+
+        @media (max-width: 665px) {
+            margin-bottom: 30px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        @media (max-width: 450px) {
+            text-align: unset;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+
+        &-left {
+            margin-right: 20px;
+            padding-top: 40px;
+            width: 100%;
+            max-width: 650px;
+
+            &__title {
+                margin-bottom: 20px;
+
+                @media (max-width: 665px) {
+                    margin-bottom: 15px;
+                    font-family: 'formular-400';
+                    font-weight: 400;
+                }
+            }
+
+            &__text {
+                margin-bottom: 40px;
+                @extend %font-400;
+            }
+
+            &-inner {
+                padding: 35px 40px 40px;
+                border-radius: 13px;
+                background-color: $sun;
+                background-image: url('#{$url}/img/dist/efficiency/efficiency_bg.png');
+                background-position: right;
+                background-repeat: no-repeat;
+                background-size: contain;
+
+                &__text {
+                    font-size: 20px;
+                    line-height: 28px;
+                    @extend %font-700;
+                    color: $white;
+
+                    @media (max-width: 665px) {
+                        font-size: 16px;
+                        line-height: 25px;
+                    }
+                }
+
+                @media (max-width: 665px) {
+                    position: relative;
+                    border-radius: 0;
+                    padding: 30px 0 130px 0;
+                    background-image: url('#{$url}/img/dist/efficiency/efficiency_bg_mob.png');
+                    background-position: right -100px bottom -10px;
+                    
+                    
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        left: 50%;
+                        width: 50vw;
+                        height: 100%;
+                        background-color: $sun;
+                        z-index: -1;
+                    }
+                    
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 0;
+                        right: 50%;
+                        width: 50vw;
+                        height: 100%;
+                        background-color: $sun;
+                        z-index: -1;
+                    }
+                }
+
+                @media (max-width: 450px) {
+                    background-position: bottom;
+                    background-size: auto;
+                }
+            }
+
+            @media (max-width: 1150px) {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+
+            @media (max-width: 665px) {
+                padding-top: 0;
+            }
+        }
+
+        &-right {
+            border: 1px solid $jungle_mist;
+            border-radius: 13px;
+            padding: 40px 30px 30px 40px;
+            width: 100%;
+            max-width: 530px;
+
+            &__title {
+                margin-bottom: 20px;
+
+                @media (max-width: 665px) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            &-list {
+
+                &__item{
+                    position: relative;
+                    padding-left: 35px;
+                    font-size: 20px;
+                    line-height: 28px;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        top: 14px;
+                        left: 0;
+                        width: 15px;
+                        height: 1px;
+                        border-top: 1px solid $bahama_blue;
+
+                        @media (max-width: 665px) {
+                            top: 11px;
+                            width: 10px;
+                        }
+                    }
+
+                    &:not(:last-child) {
+                        margin-bottom: 10px;
+
+                        @media (max-width: 665px) {
+                            margin-bottom: 15px;
+                        }
+                    }
+
+                    @media (max-width: 665px) {
+                        padding-left: 15px;
+                        font-size: 14px;
+                        line-height: 22px;
+                        font-family: 'formular-300';
+                        font-weight: 300;
+                    }
+                }
+            }
+
+            @media (max-width: 665px) {
+                border: none;
+                border-radius: 0;
+                padding: 0;
+                max-width: unset;
+            }
+        }
+
+        @media (max-width: 1150px) {
+            flex-direction: column;
+            justify-content: unset;
+            align-items: center;
+        }
+    }
+}

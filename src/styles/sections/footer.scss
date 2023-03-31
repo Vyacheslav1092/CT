@@ -1,0 +1,555 @@
+// footer desctop
+
+.footer-background {
+    background-color: $bg-footer;
+}
+
+.footer-container {
+    padding-top: 65px;
+    padding-bottom: 25px;
+}
+
+.footer-desctop {
+    @media (max-width: 755px) {
+        display: none;
+    }
+}
+
+.footer-desctop-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+.footer-info {
+    margin-right: 20px;
+    width: 100%;
+    max-width: 270px;
+
+    &__logo {
+        display: block;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 210px;
+        height: 50px;
+    }
+
+    &__work {
+        padding-left: 30px;
+        font-size: 14px;
+        line-height: 28px;
+        @extend %font-400;
+        color: $clay;
+        background-position: left;
+        background-repeat: no-repeat;
+
+        &:nth-child(2) {
+            margin-bottom: 10px;
+            background-image: url("#{$url}/img/dist/footer/hourglass.svg");
+        }
+
+        &:nth-child(3) {
+            background-image: url("#{$url}/img/dist/footer/arrow.svg");
+        }
+    }
+
+    @media (max-width: 1049px) {
+        margin-bottom: 40px;
+    }
+}
+
+.footer-top-items {
+    margin-right: 20px;
+    width: 100%;
+    max-width: 155px;
+
+    &__list {
+        font-size: 14px;
+        line-height: 20px;
+        @extend %font-700;
+        color: $clay;
+        transition: color .3s ease-in-out;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+
+        &:focus {
+            color: $blue;
+        }
+        
+        &:active {
+            color: $blue;
+        }
+    }
+}
+
+.footer-top-inner {
+    margin-right: 20px;
+    width: 100%;
+    max-width: 215px;
+
+    &__header {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 20px;
+        @extend %font-700;
+        color: $clay;
+    }
+
+    &-items {
+        font-size: 14px;
+        line-height: 18px;
+        @extend %font-400;
+        color: $clay;
+
+        &__list {
+            transition: color .3s ease-in-out;
+
+            &:hover {
+                color: $blue;
+            }
+
+            &:focus {
+                color: $blue;
+            }
+            
+            &:active {
+                color: $blue;
+            }
+        }
+
+        &__list:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &:nth-child(4) {
+        max-width: 120px;
+    }
+}
+
+.footer-top-contacts {
+    width: 100%;
+    max-width: 180px;
+
+    &__tel {
+        display: block;
+        margin-bottom: 15px;
+        padding-right: 25px;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 700;
+        color: $clay;
+        text-align: end;
+        background-image: url("#{$url}/img/dist/footer/phone.svg");
+        background-position: right top;
+        background-repeat: no-repeat;
+
+        span {
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+
+    &__mail {
+        display: block;
+        padding-right: 25px;
+        font-size: 14px;
+        line-height: 26px;
+        font-weight: 400;
+        text-align: end;
+    }
+}
+
+.footer-desctop-bottom {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.footer-bottom-items {
+    margin-right: 95px;
+    width: 100%;
+    max-width: 580px;
+    columns: 4;
+
+    &__item {
+        font-size: 14px;
+        line-height: 18px;
+        @extend %font-500;
+        color: $clay;
+        transition: color .3s ease-in-out;
+
+        &:nth-child(odd) {
+            margin-bottom: 25px;
+        }
+
+        &:nth-child(3),
+        &:nth-child(4) {
+            padding-left: 25px;
+        }
+
+        &:hover {
+            color: $blue;
+        }
+
+        &:focus {
+            color: $blue;
+        }
+        
+        &:active {
+            color: $blue;
+        }
+    }
+
+    @media (max-width: 1050px) {
+        margin-right: 20px;
+    }
+
+    @media (max-width: 850px) {
+        width: 71%;
+    }
+}
+
+.footer-bottom-inner {
+    width: 100%;
+    max-width: 220px;
+    text-align: end;
+
+    &-list {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 25px;
+
+        &__item {
+            width: 44px;
+            height: 45px;
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__docs {
+        font-size: 12px;
+        line-height: 20px;
+        @extend %font-400;
+        color: $clay;
+        text-align: end;
+        transition: color .3s ease-in-out;
+
+        &:nth-child(3),
+        &:nth-child(4) {
+
+            &:hover {
+                color: $blue;
+            }
+    
+            &:focus {
+                color: $blue;
+            }
+            
+            &:active {
+                color: $blue;
+            }
+        }
+
+    }
+}
+
+// footer mobile
+
+.footer-mobile {
+    display: none;
+    @media (max-width: 755px) {
+        display: block;
+    }
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        width: 100%;
+        max-width: 600px;
+       
+
+        &__btn {
+            position: relative;
+            font-size: 14px;
+            line-height: 20px;
+            @extend %font-700;
+            color: $clay;
+            transition: color 0.3s ease-in-out;
+
+            svg path {
+                transition: fill .3s ease-in-out;
+            }
+
+            &:hover {
+                color: $blue;
+
+                svg path {
+                    fill: $blue;
+                }
+            }
+
+            &:focus {
+                color: $blue;
+
+                svg path {
+                    fill: $blue;
+                }
+            }
+
+            &:active {
+                color: $blue;
+
+                svg path {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+}
+
+.footer-list {
+    position: relative;
+    display: block;
+    margin-bottom: 35px;
+    width: 100%;
+    max-width: 600px;
+   
+
+    &__item {
+        position: relative;
+        display: block;
+        align-items: center;
+        margin-bottom: 21px;
+        width: 50%;
+        float: left;
+
+        &:nth-last-child(3) {
+            float: right;
+
+            .footer-dropdown-partners-items {
+                margin-bottom: 35px;
+            }
+        }
+
+        &:last-child {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+        }
+
+
+        &:nth-child(6) .footer-list__btn {
+            svg path {
+                transition: fill .3s ease-in-out;
+            }
+
+            &:hover {
+
+                svg path {
+                    fill: $blue;
+                }
+            }
+
+            &:focus {
+
+                svg path {
+                    fill: $blue;
+                }
+            }
+          
+            &:active {
+
+                svg path {
+                    fill: $blue;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        position: relative;
+        font-size: 14px;
+        line-height: 18px;
+        @extend %font-400;
+        color: $clay;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $blue;
+        }
+
+        &:focus {
+            color: $blue;
+        }
+
+        &:active {
+            color: $blue;
+        }
+    }
+}
+
+footer .dropdown-menu {
+    display: none;
+    padding-top: 15px;
+    &.dropdown--active{
+        display: block;
+    }
+}
+
+.footer-dropdown-partners-items {
+    display: none;
+    padding-top: 15px;
+
+    &__item:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+        color: $clay;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $blue;
+        }
+    }
+}
+
+.footer-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+
+    &__logo {
+       margin-bottom: 15px;
+
+       @media (max-width: 540px) {
+           width: 100%;
+           max-width: 150px;
+           height: 40px;
+       }
+    }
+
+    &__link {
+        margin-bottom: 25px;
+        padding-left: 30px;
+        font-size: 16px;
+        line-height: 26px;
+        @extend %font-700;
+        color: $clay;
+        background-image: url("#{$url}/img/dist/footer/phone.svg");
+        background-position: left;
+        background-repeat: no-repeat;
+    }
+
+    &__button {
+        display: inline-block;
+        border: 1px solid $blue;
+        border-radius: 4px;
+        padding: 14px 10px;
+        width: 100%;
+        max-width: 270px;
+        font-size: 12px;
+        line-height: 20px;
+        @extend %font-400;
+        color: $blue;
+        text-align: center;
+    }
+}
+
+.footer-bottom-inner-mob {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-bottom-inner-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &__item {
+        padding-left: 30px;
+        font-size: 12px;
+        line-height: 28px;
+        @extend %font-400;
+        color: $clay;
+        background-position: left;
+        background-repeat: no-repeat;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &:nth-child(1) {
+            background-image: url('#{$url}/img/dist/footer/hourglass.svg');
+        }
+
+        &:nth-child(2) {
+            background-image: url('#{$url}/img/dist/footer/arrow.svg');
+        }
+
+        &:nth-child(3) {
+            background-image: url('#{$url}/img/dist/footer/mail.svg');
+        }
+    }
+}
+
+.footer-bottom-inner-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+        font-size: 10px;
+        line-height: 20px;
+        @extend %font-400;
+        color: $clay;
+        transition: color .3s ease-in-out;
+
+        &:not(:last-child) {
+            margin-bottom: 5px;
+        }
+
+        &:hover {
+            
+            &:nth-child(1) {
+                color: $blue;
+            } 
+           
+            &:nth-child(2) {
+                color: $blue;
+            } 
+
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.zoom {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+    &-content {
+        position: relative;
+        max-width: 1600px;
+
+        &__close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+
+            @media (max-width: 840px) {
+                top: -35px;
+            }
+        }
+
+        &__image {
+            border-radius: 50px;
+
+            img {
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+.zoom--active {
+    display: flex;
+}
